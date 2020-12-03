@@ -1,5 +1,3 @@
 @media print {
-    body{
-      display:none
-    } 
+    html, body { display: none; /* hide whole page */ } 
 }
