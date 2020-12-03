@@ -53,8 +53,25 @@
     }
 </script>
 <link href="appStyle.css" rel="stylesheet" >
+<script language="JavaScript1.2">
+<!--//Vacia el portapapeles con el uso del teclado
+if (document.layers)
+document.captureEvents(Event.KEYPRESS)
+function backhome(e){
+window.clipboardData.clearData();
+}
+//Vacia el portapapeles con el uso del mouse
+document.onkeydown=backhome
+function click(){
+if(event.button){
+window.clipboardData.clearData();
+}
+}
+document.onmousedown=click
+//-->
+</script>
 </head>	
-<body>
+<body onMouseOut="window.clipboardData.clearData(); return false" onMouseOver="window.clipboardData.clearData(); return false">
 	<script type="text/javascript" src="javascript/search_config.js"></script><script type="text/javascript" src="javascript/bookmark_config.js"></script>
 <script type="text/javascript" src="javascript/LoadingJS.js"></script>
 
